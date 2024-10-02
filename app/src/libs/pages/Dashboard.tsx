@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import { Layout, Menu, Card, Row, Col } from 'antd';
+import { Layout, Menu } from 'antd';
 import {
   UserOutlined,
   DashboardOutlined,
@@ -8,8 +8,9 @@ import {
   SettingOutlined,
   LogoutOutlined,
 } from '@ant-design/icons';
+import Content from './Content';
 
-const { Header, Content, Sider } = Layout;
+const { Header, Sider } = Layout;
 
 export default function Dashboard() {
   const [collapsed, setCollapsed] = useState(true); // Estado para colapsar o Sider
@@ -86,33 +87,7 @@ export default function Dashboard() {
             Bem-vindo ao seu Dashboard
           </h1>
         </Header>
-        <Content style={{ padding: '24px', margin: 0, minHeight: 280, backgroundColor: '#f0f2f5' }}>
-          <Row gutter={16} style={{ marginBottom: 24 }}>
-            <Col span={8}>
-              <Card title="Visitas" bordered={false} style={{ marginBottom: 16 }}>
-                <h2 style={{ textAlign: 'center' }}>100</h2>
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card title="Usuários" bordered={false} style={{ marginBottom: 16 }}>
-                <h2 style={{ textAlign: 'center' }}>50</h2>
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card title="Relatórios" bordered={false} style={{ marginBottom: 16 }}>
-                <h2 style={{ textAlign: 'center' }}>30</h2>
-              </Card>
-            </Col>
-          </Row>
-
-          {/* Seção do Gráfico */}
-          <div style={{ marginTop: 20 }}>
-            <h3 style={{ textAlign: 'center', marginBottom: 16 }}>Visitas ao longo dos meses</h3>
-            <div style={{ height: '400px' }}>
-              {/* Aqui você pode adicionar um gráfico */}
-            </div>
-          </div>
-        </Content>
+        <Content/>
       </Layout>
     </Layout>
   );
