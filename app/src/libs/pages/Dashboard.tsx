@@ -5,28 +5,16 @@ import { UserOutlined, DashboardOutlined, BarChartOutlined, SettingOutlined, Log
 const { Header, Sider, Content } = Layout;
 
 export default function Dashboard() {
-  // Dados do gráfico
-  const data = {
-    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
-    datasets: [
-      {
-        label: 'Visitas',
-        data: [65, 59, 80, 81, 56, 55],
-        fill: false,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        tension: 0.1, // Suaviza a linha do gráfico
-      },
-    ],
-  };
 
   return (
         <Layout style={{ height: '100vh', overflow: 'hidden' }}>
-      <Sider width={200} className="site-layout-background">
+      <Sider width={200} style={{
+          background: 'linear-gradient(135deg, #6253e1, #04befe)'
+        }}>
         <div style={{ textAlign: 'center', padding: '24px', color: '#fff', fontSize: '20px' }}>
           Dashboard
         </div>
-        <Menu mode="inline" defaultSelectedKeys={['1']} style={{ background: '#001529' }}>
+        <Menu mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<DashboardOutlined style={{ color: '#ffffff' }} />}>
             Início
           </Menu.Item>
@@ -44,8 +32,9 @@ export default function Dashboard() {
           </Menu.Item>
         </Menu>
       </Sider>
-      <Layout>
-        <Header className="site-layout-background" style={{ padding: 0, backgroundColor: '#001529', color: '#fff', textAlign: 'center' }}>
+      <Layout style={{backgroundColor: '#fff'}}>
+        <Header style={{ padding: 0, color: '#fff', textAlign: 'center', background: 'linear-gradient(360deg, #f0f2f5, #6253e1)'
+ }}>
           <h1 style={{ margin: '16px 0', fontSize: '24px' }}>Bem-vindo ao seu Dashboard</h1>
         </Header>
         <Content style={{ padding: '24px', margin: 0, minHeight: 280, backgroundColor: '#f0f2f5' }}>
