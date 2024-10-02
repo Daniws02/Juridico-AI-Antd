@@ -12,7 +12,7 @@ import {
 const { Header, Content, Sider } = Layout;
 
 export default function Dashboard() {
-  const [collapsed, setCollapsed] = useState(false); // Estado para colapsar o Sider
+  const [collapsed, setCollapsed] = useState(true); // Estado para colapsar o Sider
 
   // Funções para lidar com o mouse
   const handleMouseEnter = () => {
@@ -41,7 +41,7 @@ export default function Dashboard() {
             textAlign: 'center',
             padding: '24px',
             color: '#fff',
-            fontSize: collapsed ? '16px' : '20px', // Ajusta o tamanho da fonte
+            fontSize: collapsed ? '5px' : '20px', // Ajusta o tamanho da fonte
             transition: 'font-size 0.3s',
           }}
         >
@@ -82,7 +82,7 @@ export default function Dashboard() {
             background: 'linear-gradient(360deg, #f0f2f5, #6253e1)',
           }}
         >
-          <h1 style={{ margin: '16px 0', fontSize: '24px', display: collapsed ? 'none' : 'block' }}>
+          <h1 style={{ margin: '16px 0', fontSize: '24px', display: 'block' }}>
             Bem-vindo ao seu Dashboard
           </h1>
         </Header>
